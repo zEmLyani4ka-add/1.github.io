@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Последний звонок — для учителя | Личное приглашение</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, 'Segoe UI', 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 16px;
+        }
+
+        /* БИЛЕТ */
+        .ticket {
+            max-width: 550px;
+            width: 100%;
+            background: white;
+            border-radius: 48px 48px 32px 32px;
+            overflow: hidden;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ФОТО — адаптивное */
+        .photo-container {
+            width: 100%;
+            background: #0f172a;
+        }
+
+        .teacher-photo {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 16 / 10;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Верхняя ленточка */
+        .ribbon {
+            background: linear-gradient(90deg, #f59e0b, #fbbf24);
+            height: 8px;
+            width: 100%;
+        }
+
+        /* Содержимое */
+        .content {
+            padding: 28px 24px 36px;
+            text-align: center;
+        }
+
+        .personal-badge {
+            background: linear-gradient(135deg, #fef3c7, #fde68a);
+            color: #92400e;
+            font-size: 13px;
+            font-weight: 700;
+            padding: 6px 18px;
+            border-radius: 40px;
+            display: inline-block;
+            margin-bottom: 16px;
+            letter-spacing: 0.5px;
+        }
+
+        .teacher-name {
+            font-size: 2rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #1e3c72, #3b82f6);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            margin-bottom: 6px;
+        }
+
+        .subject {
+            font-size: 1rem;
+            color: #f59e0b;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .divider {
+            width: 60px;
+            height: 2px;
+            background: #e2e8f0;
+            margin: 12px auto;
+            border-radius: 10px;
+        }
+
+        .invite-text {
+            font-size: 1rem;
+            color: #334155;
+            margin: 16px 0;
+            line-height: 1.5;
+        }
+
+        .date-block {
+            background: #f8fafc;
+            border-radius: 24px;
+            padding: 16px;
+            margin: 20px 0;
+            border: 1px solid #e2e8f0;
+        }
+
+        .date {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #0f172a;
+        }
+
+        .time, .place {
+            font-size: 0.95rem;
+            color: #475569;
+            margin-top: 8px;
+        }
+
+        /* ЛИЧНОЕ ОБРАЩЕНИЕ ДЛЯ УЧИТЕЛЯ */
+        .personal-message {
+            background: linear-gradient(135deg, #eff6ff, #dbeafe);
+            border-radius: 20px;
+            padding: 16px;
+            margin: 16px 0;
+            border-left: 4px solid #3b82f6;
+            text-align: left;
+            font-style: italic;
+            color: #1e40af;
+        }
+
+        .personal-message p {
+            font-size: 0.95rem;
+            line-height: 1.45;
+        }
+
+        .signature {
+            margin-top: 12px;
+            font-weight: 600;
+            font-style: normal;
+            text-align: right;
+            font-size: 0.85rem;
+        }
+
+        hr {
+            margin: 20px 0 12px;
+            border: none;
+            height: 1px;
+            background: linear-gradient(to right, transparent, #cbd5e1, transparent);
+        }
+
+        .footer {
+            font-size: 0.7rem;
+            color: #94a3b8;
+        }
+
+        @media (max-width: 500px) {
+            .content {
+                padding: 20px 16px 28px;
+            }
+            .teacher-name {
+                font-size: 1.6rem;
+            }
+            .date {
+                font-size: 1.3rem;
+            }
+            .personal-message p {
+                font-size: 0.85rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="ticket">
+        <div class="ribbon"></div>
+
+        <!-- ========= ФОТО УЧИТЕЛЯ (вставьте своё) ========= -->
+        <div class="photo-container">
+            <img class="teacher-photo" src="teacher-photo.jpg" alt="Фото учителя" 
+                 onerror="this.src='https://placehold.co/800x500/1e293b/ffffff?text=📸+Фото+учителя'">
+        </div>
+
+        <div class="content">
+            <div class="personal-badge">
+                🎓 ПРИГЛАШЕНИЕ НА ПОСЛЕДНИЙ ЗВОНОК 🎓
+            </div>
+
+            <!-- ИМЯ УЧИТЕЛЯ (меняйте под каждого) -->
+            <div class="teacher-name">
+                УВАЖАЕМЫЕ УЧИТЕЛЯ
+            </div>
+            <div class="subject">
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="invite-text">
+                Приглашаем вас на <strong>Последний звонок</strong> — наш главный и самый трогательный праздник.
+            </div>
+
+            <div class="date-block">
+                <div class="date">26 мая 2026</div>
+                <div class="time">⏰ Начало в 12:00</div>
+                <div class="place">📍 Актовый зал 1 корпуса</div>
+            </div>
+
+            <!-- ЛИЧНОЕ ПОСЛАНИЕ ДЛЯ ЭТОГО УЧИТЕЛЯ -->
+            <div class="personal-message">
+                <p>
+                    🌹 <strong>Дорогие Учителя!</strong><br><br>
+                   Вы столько лет были рядом, дарили нам много эмоций на уроках, веселья, объясняли одно и то же по десять раз, а мы всё равно ничего не понимали. Но самое главное — вы готовили нас к экзаменам и взрослой жизни. Спасибо вам за ваше терпение и доброту.
+
+Нам очень хочется, чтобы вы разделили этот момент с нами. Приходите, пожалуйста к нам на "Последний звонок". Без вас праздник будет неполным.
+                </p>
+                <div class="signature">
+                    — Ваш 11 «К»
+                </div>
+            </div>
+
+            <hr>
+            <div class="footer">
+                <br>
+                С любовью, ваши ученики 💙
+            </div>
+        </div>
+    </div>
+
+    <script>
+        console.log('🎫 ИНСТРУКЦИЯ:');
+        console.log('1. Замените teacher-photo.jpg на фото этого учителя');
+        console.log('2. Поменяйте имя, предмет и текст в личном обращении');
+        console.log('3. Для каждого учителя — копируйте файл и меняйте эти поля');
+    </script>
+</body>
+</html>
